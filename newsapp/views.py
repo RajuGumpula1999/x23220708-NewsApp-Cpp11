@@ -4,10 +4,10 @@ from .models import FavoriteArticle
 
 
 def fetch_news(request):
-    url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=fb0a01e7371549369c6b704cbe2b39a8'  # Replace with your desired API endpoint
+    url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=9d3c0947d5bb4233828570f33ead5357'  # Replace with your desired API endpoint
     params = {
         'country': 'us',
-        'apiKey': 'fb0a01e7371549369c6b704cbe2b39a8',  # Replace with your actual API key
+        'apiKey': '9d3c0947d5bb4233828570f33ead5357',  # Replace with your actual API key
     }
 
     response = requests.get(url, params=params)
@@ -22,10 +22,10 @@ def search_news(request):
     search_query = request.GET.get('query', '')
 
     # Fetch news articles from the API based on the search query
-    url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=fb0a01e7371549369c6b704cbe2b39a8'  # Replace with your desired API endpoint
+    url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=9d3c0947d5bb4233828570f33ead5357'  # Replace with your desired API endpoint
     params = {
         'q': search_query,
-        'apiKey': 'fb0a01e7371549369c6b704cbe2b39a8',  # Replace with your actual API key
+        'apiKey': '9d3c0947d5bb4233828570f33ead5357',  # Replace with your actual API key
     }
 
     response = requests.get(url, params=params)
